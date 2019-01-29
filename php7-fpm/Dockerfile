@@ -22,6 +22,9 @@ RUN "date"
 # Type docker-php-ext-install to see available extensions
 RUN docker-php-ext-install pdo pdo_mysql
 
+# Install gnupg
+RUN apt-get update && apt-get install -my wget gnupg
+
 # Install Node
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
